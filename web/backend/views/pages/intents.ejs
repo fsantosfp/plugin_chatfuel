@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') -%>
+</head>
+<body class="container">
+    <div class="row">
+        <div class="col">
+            <%- include('../partials/header', {list: params.projects}) -%>
+        </div>
+    </div>
+    <main role="main" class="container">
+        <%- include('../partials/intents', {params: params}) -%>
+    </main>
+    <footer>
+            <%- include('../partials/footer') -%>
+    </footer>
+    <script src="js/core.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark justify-content-between">
+    <a class="navbar-brand" href="#">Getbots</a>
+    <div class="dropdown dropleft">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Projetos
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <% list.map((project)=>{ %>
+                    <a id="<%- project.projectId -%>" class="dropdown-item" href="/intents/<%- project.projectId -%>"><%- project.name -%></a>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+</nav>

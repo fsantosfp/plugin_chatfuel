@@ -1,0 +1,53 @@
+<div class="d-flex rounded align-items-center p-3 my-3 box-shadow bg-sea text-white">
+  <img src="img/getbot_logo.png" alt="" width="48" height="48" class="mr-3">
+  <div class="container">
+      <div class="row">
+          <div class="col-10">
+              <div class="row  border-bottom">
+                
+                  <div class="col-1 lh3"><strong>Project:</strong></div>
+                  <% const project = params.projects.filter(project => project.projectId == params.projectId) %>
+                  <div class="col-8 lh3"><%- project[0].name -%></div>
+               </div>
+               <div class="row">
+                  <div class="col-1 lh3"><strong>URL: </strong></div>
+                  <div class="col-8 lh3">http://localhost:3000/indetify/intent</div>
+               </div>
+          </div>
+          <div class="col-2">
+              <button type="button" class="btn btn-secondary btn-lg btn-block" id="save" disabled>Save</button></div>
+          </div>
+      </div>
+  </div>
+</div> 
+
+<div class="row">
+  <div class="col">
+      <div class="my-3 p-3 bg-white rounded box-shadow">
+          <div class="media">
+              <img src="/img/dialog-logo.png" class="mr-3" width="28" height="28" alt="dialogflow-intents">
+              <div class="media-body">
+                  <h5 class="mt-0">Dialogflow - Intents</h5>
+                  <% params.intents.map((intent)=>{ %>
+                    <input id="dg-intent" type="text" class="form-control" placeholder="First name" value="<%- intent.displayName -%>" readonly>
+                  <% }) %>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-1 ">
+  </div>
+  <div class="col">
+      <div class="my-3 p-3 bg-white rounded box-shadow">
+          <div class="media">
+              <img src="/img/chatfuel-logo.png" class="mr-3" width="28" height="28" alt="chatfuel-intents">
+              <div class="media-body">
+                  <h5 class="mt-0">Chatfuel - Intents</h5>
+                  <% params.intents.map((intent)=>{ %>
+                    <input id="dg-intent" type="text" class="form-control" placeholder="Chatfuel Intent" value="">
+                  <% }) %>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
