@@ -11,7 +11,7 @@
                </div>
                <div class="row">
                   <div class="col-1 lh3"><strong>URL: </strong></div>
-                  <div class="col-8 lh3">http://localhost:3000/indetify/intent</div>
+                  <div class="col-8 lh3" id="url"><%- params.endpoint -%></div>
                </div>
           </div>
           <div class="col-2">
@@ -43,8 +43,10 @@
               <img src="/img/chatfuel-logo.png" class="mr-3" width="28" height="28" alt="chatfuel-intents">
               <div class="media-body">
                   <h5 class="mt-0">Chatfuel - Intents</h5>
-                  <% params.intents.map((intent)=>{ %>
-                    <input id="dg-intent" type="text" class="form-control" placeholder="Chatfuel Intent" value="">
+                  <% params.intents.map((intent)=>{ 
+                        const value = params.chatfuel[intent.displayName] !== undefined ? params.chatfuel[intent.displayName] : ""
+                    %>
+                    <input id="dg-intent" type="text" class="form-control" placeholder="Chatfuel Intent" value="<%- value -%>">
                   <% }) %>
               </div>
           </div>
