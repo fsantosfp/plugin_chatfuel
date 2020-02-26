@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-router.post('/save', (req,res)=>{
+const JSONController = require('../controller/JSONController')
 
-})
+router.post('/api/save', JSONController.save)
 
 module.exports = router
