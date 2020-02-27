@@ -9,7 +9,7 @@ class Storage {
             url: "",
             intents: {}
         }
-        this.url = `http://localhost:3000/api/${project}/detectIntent/`;
+        this.url = `http://localhost:3000/api/${project}/detectIntent`;
         this.project = project
     }
 
