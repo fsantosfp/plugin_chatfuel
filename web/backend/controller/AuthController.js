@@ -1,9 +1,11 @@
 const GoogleAuth = require('../auth/GoogleAuth')
 
 exports.getAuthorization = (req,res)=>{
+    /*
     const google = new GoogleAuth
     const URL = google.generateURL()
-    res.redirect(URL)
+    res.redirect(URL)*/
+    res.redirect('./home')
 }
 
 
