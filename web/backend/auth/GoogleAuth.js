@@ -8,7 +8,7 @@ class GoogleAuth{
             'https://www.googleapis.com/auth/dialogflow'
         ];
 
-        this.redirect = "http://localhost:3000/auth"
+        this.redirect = "http://pluginchatfuel-env-1.eba-zsxfxqix.sa-east-1.elasticbeanstalk.com/auth"
         this.appSecret = "92wrb2bt11cmiuqCbg6ttcwY"
         this.serviceAccounts = "739933332602-hes3efajls5h3rig10m3k4snc4i1umqa.apps.googleusercontent.com"
         this.oauth2Client = new google.auth.OAuth2(this.serviceAccounts, this.appSecret,this.redirect)

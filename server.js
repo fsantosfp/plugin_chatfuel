@@ -26,5 +26,4 @@ app.set('views', path.join(__dirname,'web/backend/views'))
 app.set('view engine', 'ejs')
 
 
-app.listen(3000)
-console.log('server on')
+app.listen(3000, ()=>{console.log('server online')})
