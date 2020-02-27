@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const os = require('os')
 
 class Storage {
 
@@ -9,7 +10,7 @@ class Storage {
             url: "",
             intents: {}
         }
-        this.url = `http://localhost:3000/api/${project}/detectIntent`;
+        this.url = `${os.hostname()}/api/${project}/detectIntent`;
         this.project = project
     }
 
