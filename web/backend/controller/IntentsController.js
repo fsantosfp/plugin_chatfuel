@@ -7,8 +7,6 @@ exports.intentsList = async (req, res)=>{
     const projectId = req.params.id
     const token = req.session.token
 
-    console.log(req.session, token)
-
     const googleCloud = new GoogleCloud
     const api = new Dialogflow(token)
 
