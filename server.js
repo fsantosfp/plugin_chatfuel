@@ -25,5 +25,5 @@ app.use(APIRouter)
 app.set('views', path.join(__dirname,'web/backend/views'))
 app.set('view engine', 'ejs')
 
-
-app.listen(3000, ()=>{console.log('server online')})
+const port = process.env.PORT || 3000
+app.listen(port, ()=>{console.log('Server running at port ' + port )})
