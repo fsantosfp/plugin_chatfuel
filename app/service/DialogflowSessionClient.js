@@ -32,7 +32,7 @@ class DialogflowSessionClient{
 
         return {
             intentDetected : result[0].queryResult.intent.displayName,
-            redirect_to_blocks: json.intents[result[0].queryResult.intent.displayName]
+            redirect_to_blocks: [json.intents[result[0].queryResult.intent.displayName]]
         }
     }
 }
