@@ -10,7 +10,7 @@ class Storage {
             url: "",
             intents: {}
         }
-        this.url = `http://pluginchatfuel-env-1.eba-zsxfxqix.sa-east-1.elasticbeanstalk.com/api/${project}/detectIntent`;
+        this.url = `http://ec2-13-57-183-130.us-west-1.compute.amazonaws.com/api/${project}/detectIntent`;
         this.project = project
     }
 
