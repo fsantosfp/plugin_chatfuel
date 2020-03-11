@@ -6,7 +6,7 @@ const Storage = require('../json/Storage')
 class DialogflowSessionClient{
     constructor(){
         this.credentials = {
-            keyFilename: path.join(__dirname, '../credentials/credentials.json')
+            keyFilename: path.join(__dirname, '../credentials/plugin_chatfuel.json')
         }
 
         this.client = new dialogflow.SessionsClient(this.credentials)
