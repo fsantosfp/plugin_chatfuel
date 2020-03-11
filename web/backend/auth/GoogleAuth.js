@@ -5,7 +5,7 @@ class GoogleAuth{
     constructor(){
         this.scopes = ['https://www.googleapis.com/auth/cloud-platform'];
 
-        this.redirect = "http://13.57.183.130/auth"
+        this.redirect = "http://ec2-13-57-183-130.us-west-1.compute.amazonaws.com/auth"
         this.appSecret = "92wrb2bt11cmiuqCbg6ttcwY"
         this.serviceAccounts = "739933332602-hes3efajls5h3rig10m3k4snc4i1umqa.apps.googleusercontent.com"
         this.oauth2Client = new google.auth.OAuth2(this.serviceAccounts, this.appSecret,this.redirect)
