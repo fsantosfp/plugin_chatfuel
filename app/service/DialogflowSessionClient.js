@@ -29,10 +29,11 @@ class DialogflowSessionClient{
         const result = await this.client.detectIntent(request)
         const storage = new Storage(projectId)
         const json = storage.getFile()
+        const block = json.intents[result[0].queryResult.intent.displayName]
 
         return {
             intentDetected : result[0].queryResult.intent.displayName,
-            redirect_to_blocks: [json.intents[result[0].queryResult.intent.displayName]]
+            redirect_to_blocks: [block]
         }
     }
 }
