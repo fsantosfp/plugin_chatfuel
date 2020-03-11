@@ -3,12 +3,9 @@ const {google} = require('googleapis')
 class GoogleAuth{
 
     constructor(){
-        this.scopes = [
-            'https://www.googleapis.com/auth/cloud-platform.read-only',
-            'https://www.googleapis.com/auth/dialogflow'
-        ];
+        this.scopes = ['https://www.googleapis.com/auth/cloud-platform'];
 
-        this.redirect = "http://pluginchatfuel-env-1.eba-zsxfxqix.sa-east-1.elasticbeanstalk.com/auth"
+        this.redirect = "http://13.57.183.130/auth"
         this.appSecret = "92wrb2bt11cmiuqCbg6ttcwY"
         this.serviceAccounts = "739933332602-hes3efajls5h3rig10m3k4snc4i1umqa.apps.googleusercontent.com"
         this.oauth2Client = new google.auth.OAuth2(this.serviceAccounts, this.appSecret,this.redirect)
