@@ -13,6 +13,17 @@ class DialogflowAPI{
         }
     }
 
+    async agentList(){
+        const url = 'https://dialogflow.googleapis.com/v2/projects/-/agent:search';
+        const result = await axios.get(url, this.header)
+
+        const agents = result.data.agents.map((agent)=>{
+            const id = agent.parent.split("projects/")[1]
+            return {projectId: id, name: agent.displayName}
+        })
+
+        return agents
+    }
 
     async intentsList(projectId){
         
