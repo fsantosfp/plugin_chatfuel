@@ -13,5 +13,6 @@ exports.getAccessToken = async (req, res)=>{
     const token = await google.getAccessToken(req.query.code)
 
     req.session.token = token
-    res.redirect('./home')
+    const path = req.session.referer == undefined ? './home' : req.session.referer
+    res.redirect(path)
 }
