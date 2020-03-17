@@ -1,19 +1,18 @@
 const dialogflow = require('dialogflow')
 const uuid = require('uuid')
 const path = require('path')
-const Storage = require('../json/Storage')
+const Mapping = require('../../mapping/Mapping')
 
-class DialogflowSessionClient{
+class SessionClient{
     constructor(){
-        this.credentials = {
-            keyFilename: path.join(__dirname, '../credentials/plugin_chatfuel.json')
-        }
-
-        this.client = new dialogflow.SessionsClient(this.credentials)
         this.session = uuid.v4()
     }
 
     async detect(projectId, input){
+
+        this.credentials = { keyFilename: path.join(__dirname, `../../credentials/json/credential-${projectId}.json`)}
+
+        this.client = new dialogflow.SessionsClient(this.credentials)
         const sessionPath = this.client.sessionPath(projectId, this.session)
         
         const request = {
@@ -27,8 +26,8 @@ class DialogflowSessionClient{
         }
 
         const result = await this.client.detectIntent(request)
-        const storage = new Storage(projectId)
-        const json = storage.getFile()
+        const mapping = new Mapping(projectId)
+        const json = mapping.getFile()
         const block = json.intents[result[0].queryResult.intent.displayName]
 
         return {
@@ -38,4 +37,4 @@ class DialogflowSessionClient{
     }
 }
 
-module.exports = DialogflowSessionClient
+module.exports = SessionClient

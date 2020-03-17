@@ -1,4 +1,4 @@
-const DialogflowSessionClient = require('../service/DialogflowSessionClient')
+const DialogflowSessionClient = require('../service/Dialogflow/SessionClient')
 
 exports.detectIntent = async (req, res)=>{
     const {input} = req.body
