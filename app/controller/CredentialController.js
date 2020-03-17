@@ -15,7 +15,7 @@ exports.create = async (req, res)=>{
         const account = await serviceAccount.get(projectId)
         const privateKey = await serviceAccountKey.create(projectId, account)
     
-        storage.save('credentials/json/', `credential-${projectId}.json`, privateKey)
+        storage.save('credentials/', `credential-${projectId}.json`, privateKey)
         msg = 'criado novo'
     }
 
