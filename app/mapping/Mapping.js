@@ -4,7 +4,7 @@ const path = require('path')
 class Mapping {
 
     constructor(project){
-        this.path = path.join(__dirname,'../mapping/')
+        this.path = path.join(__dirname,'../mapping/json/')
         this.json = {
             url: "",
             intents: {}
