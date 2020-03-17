@@ -1,5 +1,5 @@
 const Dialogflow = require('../service/DialogflowAPI')
-const Storage = require('../../../app/json/Storage')
+const Mapping = require('../../../app/mapping/Mapping')
 
 exports.intentsList = async (req, res)=>{
 
@@ -12,8 +12,8 @@ exports.intentsList = async (req, res)=>{
     const projects = await dialogflow.agentList()
 
     const intents = await api.intentsList(projectId)
-    const file = new Storage(projectId);
-    const chatfuel = file.getFile(projectId)
+    const mapping = new Mapping(projectId);
+    const chatfuel = mapping.getFile(projectId)
     
     const params = {
         projects: projects,
