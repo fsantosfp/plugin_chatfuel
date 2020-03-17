@@ -3,7 +3,6 @@ const router = express.Router()
 
 const JSONController = require('../controller/JSONController')
 const IntentController = require('../controller/IntentController')
-const CredentialController = require('../controller/CredentialController')
 
 router.post('/api/save', JSONController.save)
 
