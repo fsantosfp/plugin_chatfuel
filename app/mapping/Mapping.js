@@ -1,11 +1,10 @@
 const fs = require('fs')
 const path = require('path')
-const os = require('os')
 
-class Storage {
+class Mapping {
 
     constructor(project){
-        this.path = path.join(__dirname,'../storage/')
+        this.path = path.join(__dirname,'../mapping/')
         this.json = {
             url: "",
             intents: {}
@@ -45,4 +44,4 @@ class Storage {
 
 }
 
-module.exports = Storage
+module.exports = Mapping
