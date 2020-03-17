@@ -7,8 +7,8 @@ const setPath = (directory, filename) => {
 
 exports.save = (directory, filename, content) => {
 
-    const file = path.join(__dirname, '../' + directory + filename)
-
+    const file = setPath(directory, filename)
+    
     fs.writeFile(file, content, (err)=>{
         if(err) throw err
     })
