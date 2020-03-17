@@ -8,7 +8,7 @@ const setPath = (directory, filename) => {
 exports.save = (directory, filename, content) => {
 
     const file = setPath(directory, filename)
-    
+
     fs.writeFile(file, content, (err)=>{
         if(err) throw err
     })
