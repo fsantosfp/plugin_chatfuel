@@ -1,7 +1,5 @@
-const path = require('path')
-
-const ServiceAccount = require('../service/GoogleCloud/ServiceAccount')
-const ServiceAccountKey = require('../service/GoogleCloud/ServiceAccountKey')
+const ServiceAccount = require('../service/googleCloud/ServiceAccount')
+const ServiceAccountKey = require('../service/googleCloud/ServiceAccountKey')
 const Storage = require('../storage/Storage')
 
 class Credential {
