@@ -26,4 +26,5 @@ exports.read = (directory, filename) => {
         const rawdata = fs.readFileSync(setPath(directory, filename))
         return JSON.parse(rawdata)
     }
+    return null
 }
