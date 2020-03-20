@@ -5,9 +5,10 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Projetos
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div id="dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <input type="text" class="form-control" placeholder="search" aria-label="Search" id="dropdown-filter">
                 <% list.map((project)=>{ %>
-                    <a id="<%- project.projectId -%>" class="dropdown-item" href="/intents/<%- project.projectId -%>"><%- project.name -%></a>
+                    <a id="<%- project.projectId -%>" class="dropdown-item" href="/project/<%- project.projectId -%>"><%- project.name -%></a>
                 <% }) %>
             </div>
         </div>

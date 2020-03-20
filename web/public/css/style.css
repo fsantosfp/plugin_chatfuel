@@ -2,6 +2,10 @@ body{
     padding-top: 4.5rem;
 }
 
+footer{
+  font-size: 12px;
+}
+
 .bg-sea{
     background-color: #4BBECE;
 }
@@ -72,4 +76,19 @@ body{
 
   .form-control{
       margin-bottom: 5px;
+  }
+
+  .input-group-text{
+    width: 3rem;
+  }
+
+  .dropdown-menu{
+    min-width: 15rem !important
+  }
+
+  #dropdown-filter{
+    background-image: url('../img/searchicon.png');
+    background-position: 14px 7px;
+    background-repeat: no-repeat;
+    padding: 14px 20px 12px 45px;
   }
