@@ -4,8 +4,7 @@ const session = require('express-session')
 const bodyParser = require('body-parser');
 
 const AuthRouter = require('./web/backend/routes/Authentication')
-const HomeRouter = require('./web/backend/routes/Home')
-const IntentsRouter = require('./web/backend/routes/Intents')
+const Routes = require('./web/backend/routes/routes')
 const Signin = require('./web/backend/middleware/Signin')
 
 const APIRouter = require('./app/routes/API')
@@ -22,9 +21,7 @@ app.use(APIRouter)
 app.use(AuthRouter)
 
 app.use(Signin)
-app.use(HomeRouter)
-app.use(IntentsRouter)
-
+app.use(Routes)
 
 app.set('views', path.join(__dirname,'web/backend/views'))
 app.set('view engine', 'ejs')
