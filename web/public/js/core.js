@@ -8,7 +8,7 @@ document.querySelectorAll(".form-control").forEach(item => {
 
 const save = ()=>{
     const intents = document.querySelectorAll('.form-control')
-    let pos_chautfuel = intents.length / 2
+    let pos_chautfuel = Math.floor(intents.length / 2)
     const size = pos_chautfuel
     const project = document.location.pathname.split("/")[2]
     let data = {project: project,intents:{}}
