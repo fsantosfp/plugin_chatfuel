@@ -29,7 +29,7 @@
               <div class="media-body">
                   <h5 class="mt-0">Dialogflow - Intents</h5>
                   <% params.intents.map((intent)=>{ %>
-                    <input id="dg-intent" type="text" class="form-control" placeholder="First name" value="<%- intent.displayName -%>" readonly>
+                    <input type="text" class="form-control" placeholder="First name" value="<%- intent.displayName -%>" readonly>
                   <% }) %>
               </div>
           </div>
@@ -46,7 +46,7 @@
                   <% params.intents.map((intent)=>{ 
                         const value = params.chatfuel[intent.displayName] !== undefined ? params.chatfuel[intent.displayName] : ""
                     %>
-                    <input id="dg-intent" type="text" class="form-control" placeholder="Chatfuel Intent" value="<%- value -%>">
+                    <input type="text" class="form-control" placeholder="Chatfuel Intent" value="<%- value -%>">
                   <% }) %>
               </div>
           </div>
