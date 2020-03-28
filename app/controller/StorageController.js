@@ -1,9 +1,8 @@
 const Mapping = require('../mapping/Mapping')
 const Credentials = require('../credentials/Credential')
+const {API:{endpoint}} = require('../config/config')
 
 exports.save = (req, res)=>{
-    
-    console.log(req.body)
 
     const data = req.body;
     const project = req.body.project
@@ -13,7 +12,8 @@ exports.save = (req, res)=>{
     const credential = new Credentials(token)
 
     credential.create(project)
-    const endpoint = mapping.save(data)
+    mapping.save(data)
 
-    res.json({url: endpoint})
+
+    res.json({url: endpoint.replace('projectId', project)})
 }

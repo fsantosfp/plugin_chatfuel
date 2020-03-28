@@ -9,7 +9,6 @@ class Mapping {
     save(data){
         const content = JSON.stringify(data.intents)
         Storage.save(this.directory, this.fileName, content)
-        return this.url;
     }
 
     read(){
